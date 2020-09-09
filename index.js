@@ -22,6 +22,8 @@ function searchCity(city) {
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeather);
+  let searchInput = document.querySelector("#input-city");
+  searchInput.value = "";
 }
 
 function showWeather(response) {
