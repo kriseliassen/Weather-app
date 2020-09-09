@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/d9e1e5bf90.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;600;700&family=Martel:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style2.css" />
+    <title>Weather app 2.0</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="search" id="search-city-form">
+        <input
+          type="text"
+          class="search-input"
+          id="input-city"
+          placeholder="Enter a city"
+          autocomplete="off"
+        />
+        <button
+          type="submit"
+          class="form-button"
+          title="Search any city"
+          id="search-city-button"
+        >
+          🔍
+        </button>
+        <button
+          type="submit"
+          class="form-button"
+          title="Find your location"
+          id="current-location-button"
+        >
+          📍
+        </button>
+      </form>
+      <p id="cels-to-fahr">
+        <a href="#" id="celsius" title="Celsius">°C</a> |
+        <a href="#" id="fahrenheit" title="Fahrenheit">°F</a>
+      </p>
+      <h1 id="city">Stavanger</h1>
+      <p id="right-now">Right now, Friday August 21st at 19:20, it's</p>
+      <div class="row" id="current-weather-div">
+        <div class="col-7">
+          <p id="temp">
+            <span id="temp-now">21</span> <span id="c-f-marking">°C</span>
+          </p>
+          <p id="weather-now">scattered clouds</p>
+        </div>
+        <div class="col-5">
+          <div id="details-now">
+            <p><i class="fas fa-tint"></i> 10%</p>
+            <p><i class="fas fa-wind"></i> 2m/s</p>
+            <p><i class="fas fa-arrows-alt-v temperature"></i> 27° | 18°</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <h5>Coming up</h5>
+
+      <div class="row" id="forecast">
+        <div class="col">
+          <h6>Sun</h6>
+          <i class="fas fa-cloud-sun"></i>
+          <p>
+            <strong>20°C</strong> <br />
+            17°C
+          </p>
+          <p>
+            <i class="fas fa-tint"></i>
+            0%
+            <br />
+            <i class="fas fa-wind"></i>
+            8m/s
+          </p>
+        </div>
+        <div class="col forecast">
+          <h6>Mon</h6>
+          <i class="fas fa-cloud-sun"></i>
+          <p>
+            <strong>20°C</strong> <br />
+            17°C
+          </p>
+          <p>
+            <i class="fas fa-tint"></i>
+            0%
+            <br />
+            <i class="fas fa-wind"></i>
+            8m/s
+          </p>
+        </div>
+        <div class="col forecast">
+          <h6>Tue</h6>
+          <i class="fas fa-cloud-sun"></i>
+          <p>
+            <strong>20°C</strong> <br />
+            17°C
+          </p>
+          <p>
+            <i class="fas fa-tint"></i>
+            0%
+            <br />
+            <i class="fas fa-wind"></i>
+            8m/s
+          </p>
+        </div>
+        <div class="col forecast">
+          <h6>Wed</h6>
+          <i class="fas fa-cloud-sun"></i>
+          <p>
+            <strong>20°C</strong> <br />
+            17°C
+          </p>
+          <p>
+            <i class="fas fa-tint"></i>
+            0%
+            <br />
+            <i class="fas fa-wind"></i>
+            8m/s
+          </p>
+        </div>
+        <div class="col forecast">
+          <h6>Thu</h6>
+          <i class="fas fa-cloud-sun"></i>
+          <p>
+            <strong>20°C</strong> <br />
+            17°C
+          </p>
+          <p>
+            <i class="fas fa-tint"></i>
+            0%
+            <br />
+            <i class="fas fa-wind"></i>
+            8m/s
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
