@@ -1,3 +1,8 @@
+*:focus {
+  outline: none;
+  box-shadow: 0 0 1pt 1pt#24a19c;
+}
+
 .container {
   position: relative;
   margin-top: 20px;
@@ -33,6 +38,10 @@
 
 .form-button:hover {
   opacity: 0.8;
+}
+
+.form-button:focus {
+  outline: none;
 }
 
 p#cels-to-fahr {
