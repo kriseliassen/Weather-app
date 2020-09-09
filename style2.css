@@ -120,3 +120,9 @@ h5 {
   background: rgba(36, 161, 156, 0.3);
   padding: 20px 0;
 }
+
+.coded-by {
+  font-size: 0.75rem;
+  font-family: "Assistant", sans-serif;
+  text-align: center;
+}
