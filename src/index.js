@@ -91,14 +91,16 @@ function displayWeather(response) {
   let newIconElement = formatIcon(newIcon);
 
   celsiusTemperature = response.data.main.temp;
+  maxCelsiusToday = response.data.main.temp_max;
+  minCelsiusToday = response.data.main.temp_min;
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  maxTempElement.innerHTML = Math.round(response.data.main.temp_max);
-  minTempElement.innerHTML = Math.round(response.data.main.temp_min);
+  maxTempElement.innerHTML = Math.round(maxCelsiusToday);
+  minTempElement.innerHTML = Math.round(minCelsiusToday);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute("src", `${newIconElement}`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
@@ -113,8 +115,6 @@ function displayForecast(response) {
     forecast = response.data.list[index];
     let newIcon = forecast.weather[0].icon;
     let newIconElement = formatIcon(newIcon);
-    console.log(newIcon);
-    console.log(newIconElement);
 
     forecastElement.innerHTML += `<section>
             <h4>${formatHours(forecast.dt * 1000)}</h4>
@@ -162,21 +162,33 @@ function searchCity(city) {
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature-now");
+  let maxTempTodayElement = document.querySelector("#max-temp");
+  let minTempTodayElement = document.querySelector("#min-temp");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  let fahrenheitTemperatureNow = (celsiusTemperature * 9) / 5 + 32;
+  let maxFahrenheitToday = (maxCelsiusToday * 9) / 5 + 32;
+  let minFahrenheitToday = (minCelsiusToday * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperatureNow);
+  maxTempTodayElement.innerHTML = Math.round(maxFahrenheitToday);
+  minTempTodayElement.innerHTML = Math.round(minFahrenheitToday);
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature-now");
+  let maxTempTodayElement = document.querySelector("#max-temp");
+  let minTempTodayElement = document.querySelector("#min-temp");
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  maxTempTodayElement.innerHTML = Math.round(maxCelsiusToday);
+  minTempTodayElement.innerHTML = Math.round(minCelsiusToday);
 }
 
 let celsiusTemperature = null;
+let maxCelsiusToday = null;
+let minCelsiusToday = null;
 searchCity("Stavanger");
 
 let searchCityForm = document.querySelector(".search-city-form");

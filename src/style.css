@@ -146,9 +146,21 @@ small {
   width: 48px;
 }
 
+.units {
+  margin-left: 10px;
+}
+
 .forecast-temperature {
   font-size: 13px;
   height: auto;
   line-height: 15px;
   white-space: nowrap;
+}
+
+.temperature .active {
+  color: inherit;
+  cursor: default;
+}
+.temperature .active:hover {
+  text-decoration: none;
 }
