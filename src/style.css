@@ -1,0 +1,138 @@
+*:focus {
+  outline: none;
+  box-shadow: 0 0 1pt 1pt#24a19c;
+}
+
+p#cels-to-fahr {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 200ms ease-in-out;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  padding: 30px 0 10px;
+  font-family: "Martel", serif;
+  font-size: 54px;
+  color: #24a19c;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  align-items: center;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+
+  margin: 0 0 0 0;
+  padding: 5px 0px;
+}
+
+.container {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px 30px;
+  font-family: "Assistant", sans-serif;
+  font-weight: lighter;
+  border: 2px solid #24a19c;
+  border-radius: 10px;
+  min-width: 400px;
+  max-width: 45%;
+}
+
+.search {
+  display: inline;
+}
+
+.search-input {
+  width: 55%;
+  height: 42px;
+  border: 1px solid #24a19c;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.form-button {
+  background: #ffc7c7;
+  height: 42px;
+  width: 42px;
+  border: 2px solid #ffc7c7;
+  border-radius: 4px;
+  margin-right: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+.form-button:hover {
+  opacity: 0.8;
+}
+
+.form-button:focus {
+  outline: none;
+}
+
+#right-now {
+  display: block;
+
+  font-size: 20px;
+}
+
+#current-weather-div {
+  padding: 10px 0;
+}
+
+#temp {
+  font-size: 60px;
+  font-family: "Assistant", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin: 10px 0 0;
+  padding: 0 0;
+}
+
+#weather-now {
+  text-align: center;
+  font-size: 20px;
+  padding: 0px 0;
+}
+
+#details-now-circle {
+  display: block;
+  margin: 0 auto;
+  background: #ffc7c7;
+  border: 1px solid #ffc7c7;
+  text-align: center;
+  padding: 28px;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+}
+
+#details-now-text {
+  font-size: 18px;
+  line-height: 100%;
+}
+
+#forecast {
+  text-align: center;
+  background: rgba(36, 161, 156, 0.3);
+  padding: 20px 0;
+}
+
+.coded-by {
+  font-size: 0.75rem;
+  font-family: "Assistant", sans-serif;
+  text-align: center;
+}

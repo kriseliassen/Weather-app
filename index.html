@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather app 2.0</title>
   </head>
   <body>
@@ -55,17 +55,19 @@
       <h1 id="city">Stavanger</h1>
       <p id="right-now">Right now, Friday August 21st at 19:20, it's</p>
       <div class="row" id="current-weather-div">
-        <div class="col-7">
+        <div class="col-6">
           <p id="temp">
             <span id="temp-now">21</span> <span id="c-f-marking">°C</span>
           </p>
           <p id="weather-now">scattered clouds</p>
         </div>
-        <div class="col-5">
-          <div id="details-now">
-            <p><i class="fas fa-tint"></i> 10%</p>
-            <p><i class="fas fa-wind"></i> 2m/s</p>
-            <p><i class="fas fa-arrows-alt-v temperature"></i> 27° | 18°</p>
+        <div class="col-6">
+          <div id="details-now-circle">
+            <ul id="details-now-text">
+              <li>Humidity: 10%</li>
+              <li>Wind: 2 m/s</li>
+              <li>Max/min: 27° | 18°</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -154,6 +156,6 @@
       <a href="https://github.com/kriseliassen/Weather-app">Open source code</a>
       by Kristin Eliassen
     </p>
-    <script src="index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
