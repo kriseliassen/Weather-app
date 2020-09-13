@@ -18,144 +18,69 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css" />
-    <title>Weather app 2.0</title>
+    <link rel="stylesheet" href="src/style2.css" />
+    <title>Kristins Weather App</title>
   </head>
   <body>
     <div class="container">
-      <form class="search" id="search-city-form">
-        <input
-          type="text"
-          class="search-input"
-          id="input-city"
-          placeholder="Enter a city"
-          autocomplete="off"
-        />
-        <button
-          type="submit"
-          class="form-button"
-          title="Search any city"
-          id="search-city-button"
-        >
-          🔍
-        </button>
-        <button
-          type="submit"
-          class="form-button"
-          title="Find your location"
-          id="current-location-button"
-        >
-          📍
-        </button>
-      </form>
-      <p id="cels-to-fahr">
-        <a href="#" id="celsius" title="Celsius">°C</a> |
-        <a href="#" id="fahrenheit" title="Fahrenheit">°F</a>
-      </p>
-      <h1 id="city">Stavanger</h1>
-      <p id="right-now">Right now, Friday August 21st at 19:20, it's</p>
-      <div class="row" id="current-weather-div">
-        <div class="col-6">
-          <p id="temp">
-            <span id="temp-now">21</span> <span id="c-f-marking">°C</span>
-          </p>
-          <p id="weather-now">scattered clouds</p>
-        </div>
-        <div class="col-6">
-          <div id="details-now-circle">
-            <ul id="details-now-text">
-              <li>Humidity: 10%</li>
-              <li>Wind: 2 m/s</li>
-              <li>Max/min: 27° | 18°</li>
-            </ul>
-          </div>
-        </div>
+      <div class="form-wrapper">
+        <section class="search-city-form">
+          <form>
+            <input
+              type="search"
+              class="search-input"
+              id="input-city"
+              placeholder="Enter a city"
+              autocomplete="off"
+            />
+            <button
+              type="submit"
+              class="form-btn"
+              title="Search any city"
+              id="search-city-btnn"
+            >
+              🔍
+            </button>
+            <button
+              type="submit"
+              class="form-btn"
+              title="Find your location"
+              id="current-location-btn"
+            >
+              📍
+            </button>
+          </form>
+        </section>
+        <h1 id="city"></h1>
+        <h3 id="description"></h3>
+        <p id="date"></p>
       </div>
-      <hr />
-      <h5>Coming up</h5>
-
-      <div class="row" id="forecast">
-        <div class="col">
-          <h6>Sun</h6>
-          <i class="fas fa-cloud-sun"></i>
-          <p>
-            <strong>20°C</strong> <br />
-            17°C
-          </p>
-          <p>
-            <i class="fas fa-tint"></i>
-            0%
-            <br />
-            <i class="fas fa-wind"></i>
-            8m/s
-          </p>
+      <section class="weather-now">
+        <div class="temperature">
+          <img src="" alt="" id="icon" />
+          <strong id="temperature-now"></strong
+          ><span class="units"
+            ><a href="#" id="celsius-link" class="active">°C</a> |
+            <a href="#" id="fahrenheit-link"> °F</a></span
+          >
         </div>
-        <div class="col forecast">
-          <h6>Mon</h6>
-          <i class="fas fa-cloud-sun"></i>
-          <p>
-            <strong>20°C</strong> <br />
-            17°C
-          </p>
-          <p>
-            <i class="fas fa-tint"></i>
-            0%
-            <br />
-            <i class="fas fa-wind"></i>
-            8m/s
-          </p>
-        </div>
-        <div class="col forecast">
-          <h6>Tue</h6>
-          <i class="fas fa-cloud-sun"></i>
-          <p>
-            <strong>20°C</strong> <br />
-            17°C
-          </p>
-          <p>
-            <i class="fas fa-tint"></i>
-            0%
-            <br />
-            <i class="fas fa-wind"></i>
-            8m/s
-          </p>
-        </div>
-        <div class="col forecast">
-          <h6>Wed</h6>
-          <i class="fas fa-cloud-sun"></i>
-          <p>
-            <strong>20°C</strong> <br />
-            17°C
-          </p>
-          <p>
-            <i class="fas fa-tint"></i>
-            0%
-            <br />
-            <i class="fas fa-wind"></i>
-            8m/s
-          </p>
-        </div>
-        <div class="col forecast">
-          <h6>Thu</h6>
-          <i class="fas fa-cloud-sun"></i>
-          <p>
-            <strong>20°C</strong> <br />
-            17°C
-          </p>
-          <p>
-            <i class="fas fa-tint"></i>
-            0%
-            <br />
-            <i class="fas fa-wind"></i>
-            8m/s
-          </p>
-        </div>
-      </div>
+        <ul class="current-details">
+          <li>Humidity: <span id="humidity"></span>%</li>
+          <li>Wind: <span id="wind"></span> m/s</li>
+          <li>
+            Max/min: <span id="max-temp"></span>° | <span id="min-temp"></span>°
+          </li>
+        </ul>
+      </section>
+      <div class="forecast"></div>
+      <small>
+        <a href="https://github.com/kriseliassen/Weather-app" target="_blank"
+          >Open source code</a
+        >
+        by Kristin Eliassen
+      </small>
     </div>
-    <p class="coded-by">
-      <a href="https://github.com/kriseliassen/Weather-app">Open source code</a>
-      by Kristin Eliassen
-    </p>
+
     <script src="src/index.js"></script>
   </body>
 </html>
